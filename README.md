@@ -1,176 +1,119 @@
-Wildfire Detection and Prediction Project
 
+# 🌲🔥 Wildfire Detection and Prediction Project
 
+## 🚀 Project Overview
+This project, developed during a hackathon, addresses the critical challenge of detecting and predicting wildfires. By leveraging modern technology, including drones, infrared sensors, and machine learning models, we aim to enhance real-time detection and forecasting of wildfire risks. The ultimate goal is to mitigate the devastating impacts of wildfires on lives, ecosystems, and economies.
 
-Project Overview
+Our solution integrates a web interface, a Python backend, and a YOLO-based machine learning model that can be deployed on drones for wildfire detection.
 
-This project, developed for a hackathon, aims to address the critical challenge of detecting and predicting wildfires. By leveraging modern technology, including drone systems and infrared sensors, the project seeks to enhance real-time detection and forecasting of wildfire risks. This solution will help mitigate the devastating impact of wildfires on lives, ecosystems, and economies.
+---
 
-Wildfire History in Greece
+## 🗂️ File Structure
 
-Key Events:
+Here’s a high-level view of the repository structure:
 
-28 June 2007 - 3 September 2007
-
-Burned area: 270,000 hectares (2,700 km²), 670,000 acres
-
-Deaths:
-
-June: 9
-
-July: 5
-
-August: 67
-
-September: 4
-
-Total: 85
-
-Cause: Heat wave, arson, and wind
-
-July 2009
-
-Location: Southern Europe and Anatolia
-
-Deaths: 8
-
-Cause: Lightning, arson, and ammunition training
-
-18 August 2012 – 28 August 2012
-
-Location: Greece: Chios
-
-Cause: Heat wave, suggested arson, and wind
-
-July-August 2015
-
-Burned area: 35,000 hectares
-
-July-August 2016
-
-Burned area: 55,000 hectares
-
-July-August 2017
-
-Burned area: 40,000 hectares
-
-July-August 2018
-
-Burned area: 100,000 hectares
-
-23 July 2018 – 26 July 2018
-
-Location: Attica
-
-Deaths: 104
-
-Cause: Human negligence
-
-3 August - 3 September 2019
-
-Location: Euboea, Peloponnese, and Attica, Greece
-
-Total fires: 140+
-
-Total area: 55,000 hectares
-
-Deaths: 3
-
-Cause: Arson
-
-July-August 2020
-
-Burned area: 70,000 hectares
-
-July-August 2021
-
-Burned area: 125,000 hectares
-
-July-August 2022
-
-Burned area: 45,000 hectares
-
-Deaths: 41
-
-July 2023
-
-Burned area: 120,000 hectares
-
-January to Present 2024
-
-Burned area: 70,000 hectares
-
-Economic Impact
-
-Prevention Budget:
-
-2021: €800 million
-
-Other periods: €11 million
-
-Economic Losses:
-
-2018: Approx. €1.5 billion
-
-2021: Approx. €500 million
-
-Total estimated direct and indirect losses from 2015 to 2024: €6-7 billion
-
-Proposed Solution
-
-Equipment:
-
-DJI Mavic Mini 2
-
-Approximate price: $299 - €400
-
-Infrared Sensor
-
-Approximate price: €150
-
-Objectives:
-
-Detection:
-
-Utilize drone systems equipped with infrared sensors to detect wildfires in real-time.
-
-Prediction:
-
-Analyze environmental data (e.g., wind speed, temperature) to predict potential wildfire outbreaks.
-
-Cost-Effectiveness:
-
-Provide a scalable and affordable solution for governments and local authorities.
-
-Implementation Strategy:
-
-Deploy drones to monitor high-risk regions.
-
-Integrate infrared sensors for accurate thermal imaging.
-
-Use machine learning models to analyze and predict wildfire risks based on historical and real-time data.
-
-Develop a centralized platform for monitoring and alerting relevant stakeholders.
-
-How to Build the File Tree
-
-To organize your project files for development, follow the structure below:
-
-project_root/
-├── data/
-│   └── wildfire_data.csv
-├── src/
+```plaintext
+🚀 12:14:14 ❯ tree -L 2
+├── api
+│   ├── getimg.py
 │   ├── main.py
-│   ├── detection/
-│   │   └── detector.py
-│   ├── prediction/
-│   │   └── predictor.py
-│   └── utils/
-│       └── helpers.py
-├── tests/
-│   └── test_wildfire.py
-└── README.md
+│   ├── satellite_image.jpg
+│   └── test.py
+├── model
+│   ├── data.yaml
+│   ├── README.dataset.txt
+│   ├── README.roboflow.txt
+│   ├── runs
+│   ├── test
+│   ├── test.txt
+│   ├── train
+│   ├── valid
+│   ├── yolo11n.pt
+│   └── yolov8n.pt
+├── wildfire
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── node_modules
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public
+│   ├── src
+│   └── vite.config.js
+11 directories, 17 files
+```
 
-Conclusion
+---
 
-This project represents a proactive approach to tackling the wildfire crisis, combining advanced technology with data-driven insights. By focusing on early detection and accurate prediction, this solution aims to minimize wildfire damage and save lives.
+## 🖥️ How to Run the Project
+
+### 🌐 Running the Web Application
+1. Navigate to the root directory of the repository.
+2. Install the required dependencies by running:
+   ```bash
+   npm install
+   ```
+3. Start the web application:
+   ```bash
+   npm run start
+   ```
+4. Open your browser and visit `http://localhost:3000` to access the web interface.
+
+### 🐍 Running the Python Backend
+1. Navigate to the `api` directory.
+2. Run the Python backend:
+   ```bash
+   python main.py
+   ```
+
+### 🧠 Running the Model
+1. Navigate to the `model` directory.
+2. Run the model using:
+   ```bash
+   python main.py
+   ```
+
+The model is designed to be deployed on drones for real-time wildfire detection.
+
+---
+
+## 📂 Key Components
+
+### `api`
+- Contains Python scripts for the backend, including image processing (`getimg.py`) and the main server (`main.py`).
+- Example image: `satellite_image.jpg`.
+
+### `model`
+- Includes training and validation datasets, YOLO model files (`yolo11n.pt` and `yolov8n.pt`), and instructions for working with the dataset.
+- Configurable via `data.yaml`.
+
+### `wildfire`
+- Web application powered by `vite` for user interaction.
+- JavaScript/Node.js setup with files like `package.json` and `vite.config.js`.
+
+---
+
+## 🚁 Features
+
+- **Drone Integration**: Detect wildfires in real-time using a drone-mounted model.
+- **Infrared Sensor Data**: Process satellite and drone imagery for accurate predictions.
+- **Machine Learning**: YOLOv8 model trained for wildfire detection.
+- **Web Dashboard**: Intuitive interface for monitoring and reporting.
+
+---
+
+## 🌍 Why It Matters
+Wildfires devastate communities, wildlife, and ecosystems globally, causing billions in damages. This project provides a proactive approach to mitigating these risks through technology.
+
+---
+
+## 🤝 Contributors
+This project was collaboratively developed during a hackathon to drive innovation and create impactful solutions. Special thanks to all team members for their contributions.
+
+---
+
+## 📜 License
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+🎉 Thank you for checking out the Wildfire Detection and Prediction Project! Together, we can make a difference. 🌱
