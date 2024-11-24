@@ -1,6 +1,13 @@
 
 # 🌲🔥 Wildfire Detection and Prediction Project
 
+## 🚀 Videos Demo 
+
+Application
+https://www.youtube.com/watch?v=xTQU4_6axDs
+View and detection
+https://youtu.be/Prd9CerDnew
+
 ## 🚀 Project Overview
 This project, developed during a hackathon, addresses the critical challenge of detecting and predicting wildfires. By leveraging modern technology, including drones, infrared sensors, and machine learning models, we aim to enhance real-time detection and forecasting of wildfire risks. The ultimate goal is to mitigate the devastating impacts of wildfires on lives, ecosystems, and economies.
 
