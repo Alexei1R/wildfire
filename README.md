@@ -56,13 +56,18 @@ Here’s a high-level view of the repository structure:
    ```bash
    npm run start
    ```
+
+   UI you can see website this link https://www.youtube.com/watch?v=xTQU4_6axDs
 4. Open your browser and visit `http://localhost:3000` to access the web interface.
 
 ### 🐍 Running the Python Backend
 1. Navigate to the `api` directory.
 2. Run the Python backend:
+3. Make shure to download the dataset from the google disk "https://drive.google.com/drive/folders/1V7NIiYGhaehxTYHm5oxGbDIT6t7p_xSg"
    ```bash
    python main.py
+   python ModelTrain.py
+   //also there is the ModelTrain.py  that you can use to train the model 
    ```
 
 ### 🧠 Running the Model
@@ -73,6 +78,7 @@ Here’s a high-level view of the repository structure:
    ```
 
 The model is designed to be deployed on drones for real-time wildfire detection.
+Model output can be seen on youtube https://youtu.be/Prd9CerDnew
 
 ---
 
